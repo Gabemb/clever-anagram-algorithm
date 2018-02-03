@@ -53,14 +53,11 @@ const assignPrimes = () => {
  */
 const areAnagrams = (word1, word2) => {
   if (word1.length !== word2.length) return false;
-  const primeValues = assignPrimes();
   let result = false;
-  firstWordVal = word1.split('').reduce((total, letter) => total * primeValues[letter], 1);
-  secondWordVal = word2.split('').reduce((total, letter) => total * primeValues[letter], 1);
-
-  console.log('firstWordVal: ', firstWordVal);
-  console.log('secondWordVal: ', secondWordVal);
-
+  const primeValues = assignPrimes();
+  const firstWordVal = word1.split('').reduce((total, letter) => total * primeValues[letter], 1);
+  const secondWordVal = word2.split('').reduce((total, letter) => total * primeValues[letter], 1);
+  
   if (firstWordVal === secondWordVal){
     result = true;
   }
@@ -68,7 +65,8 @@ const areAnagrams = (word1, word2) => {
   return result;
 };
 
-console.log(areAnagrams('wepa', 'pawe'));
-console.log(areAnagrams('totoro', 'rttooo'));
-console.log(areAnagrams('ayjenfk', 'vbqewaf'));
-console.log(areAnagrams('', 'sup'));
+// Some simple tests cases
+console.log(areAnagrams('wepa', 'pawe')); // true
+console.log(areAnagrams('totoro', 'rttooo')); // true 
+console.log(areAnagrams('ayjenfk', 'vbqewaf')); // false
+console.log(areAnagrams('', 'sup')); // false
