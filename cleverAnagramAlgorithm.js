@@ -13,8 +13,6 @@
 
 /**
  * An implementation of the Sieve of Eratosthenes (https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
- * @param   {array}  sieve   Keeps track of all the multiples of each prime number 
- *                           (which inherently makes them not prime)
  * @return  {array}  primes  An array of all the prime numbers from 2 - 101. 26 in total.
  */
 const createPrimesArray = () => {
