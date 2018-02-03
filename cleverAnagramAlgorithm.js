@@ -16,7 +16,8 @@
  * @return  {array}  primes  An array of all the prime numbers from 2 - 101. 26 in total.
  */
 const createPrimesArray = () => {
-  let sieve = [];
+  let sieve = []; /* Keeps track of all the multiples of each prime number 
+                    (which inherently makes them not prime) */
   let primes = [];
   for (let i = 2; i <= 101; i++) {
     if (!sieve[i]) {
